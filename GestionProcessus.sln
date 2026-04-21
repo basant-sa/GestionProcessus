@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionProcessus", "Gestion
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PgmSecondaire", "PgmSecondaire\PgmSecondaire.csproj", "{A3FD3674-69DC-461B-BE2C-F69E1F98996E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadsApp", "ThreadsApp\ThreadsApp.csproj", "{BC93E400-EA75-4E83-B891-51791A702CD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A3FD3674-69DC-461B-BE2C-F69E1F98996E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3FD3674-69DC-461B-BE2C-F69E1F98996E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3FD3674-69DC-461B-BE2C-F69E1F98996E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC93E400-EA75-4E83-B891-51791A702CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC93E400-EA75-4E83-B891-51791A702CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC93E400-EA75-4E83-B891-51791A702CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC93E400-EA75-4E83-B891-51791A702CD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
