@@ -23,26 +23,27 @@
 
         static int iCommun = 0;
 
-        static void A()
-        {
-            lock (verrou)
-            {
-                Console.WriteLine("A " + iCommun);
-                iCommun++;
-            }
-        }
-
         static void B()
         {
-            lock (verrou)
-            {
-                Console.WriteLine("B " + iCommun);
-                iCommun++;
-            }
+            mutex.WaitOne();
+
+            Console.WriteLine("B " + iCommun);
+            iCommun++;
+
+            mutex.ReleaseMutex();
         }
 
-        static object verrou = new object();
+        static void A()
+        {
+            mutex.WaitOne();
 
+            Console.WriteLine("A " + iCommun);
+            iCommun++;
+
+            mutex.ReleaseMutex();
+        }
+
+        static Mutex mutex = new Mutex();
         static void Main()
             {
                 Thread t1 = new Thread(A);
