@@ -8,7 +8,7 @@ namespace GestionProcessus
         {
             Process p =new Process();
 
-            p.StartInfo.FileName = @"C:\Users\basan\OneDrive\Documents\Desktop\2em Q2\LABEYE\GestionProcessus\PgmSecondaire\bin\Debug\net8.0\PgmSecondaire.exe";
+            //p.StartInfo.FileName = @"C:\Users\basan\OneDrive\Documents\Desktop\2em Q2\LABEYE\GestionProcessus\PgmSecondaire\bin\Debug\net8.0\PgmSecondaire.exe";
             p.StartInfo.FileName = "notepad.exe";
 
             //DateTime start = DateTime.Now;
