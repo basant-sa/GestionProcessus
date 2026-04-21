@@ -8,27 +8,23 @@ namespace GestionProcessus
         {
             Process p =new Process();
 
-            //p.StartInfo.FileName = @"C:\Users\basan\OneDrive\Documents\Desktop\2em Q2\LABEYE\GestionProcessus\PgmSecondaire\bin\Debug\net8.0\PgmSecondaire.exe";
-            p.StartInfo.FileName = "notepad.exe";
+            p.StartInfo.FileName = @"C:\Users\basan\OneDrive\Documents\Desktop\2em Q2\LABEYE\GestionProcessus\PgmSecondaire\bin\Debug\net8.0\PgmSecondaire.exe";
+            p.StartInfo.UseShellExecute =false;
+            p.StartInfo.RedirectStandardInput = true;       
+            p.StartInfo.RedirectStandardOutput = true;  
 
             //DateTime start = DateTime.Now;
             p.Start();
 
-            Console.WriteLine("Appuyez sur ENTER pour fermer Notepad...");
-            Console.ReadLine();
+            p.StandardInput.WriteLine("BASANT");
+            p.StandardInput.WriteLine("ALBASHITI");
 
-            Console.WriteLine("HasExited = " + p.HasExited);
+            string result= p.StandardOutput.ReadToEnd();
+            Console.WriteLine(result);
 
-            if (!p.HasExited)
-            {
-                p.Kill();
-                Console.WriteLine("Notepad fermé !");
-            }
-            else
-            {
-                Console.WriteLine("Notepad était déjà fermé.");
+            p.WaitForExit();
 
-            }
+
         }
     }
 }
