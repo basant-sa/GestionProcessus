@@ -21,10 +21,32 @@
                 }
             }
 
-            static void Main()
+        static int iCommun = 0;
+
+        static void A()
+        {
+            lock (verrou)
             {
-                Thread t1 = new Thread(f);
-                Thread t2 = new Thread(g);
+                Console.WriteLine("A " + iCommun);
+                iCommun++;
+            }
+        }
+
+        static void B()
+        {
+            lock (verrou)
+            {
+                Console.WriteLine("B " + iCommun);
+                iCommun++;
+            }
+        }
+
+        static object verrou = new object();
+
+        static void Main()
+            {
+                Thread t1 = new Thread(A);
+                Thread t2 = new Thread(B);
 
                 t1.Start();
                 t2.Start();
